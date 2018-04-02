@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Default";
+    Layout = "~/Views/Shared/Default.cshtml";
+}
+
+<h2>Home</h2>
+@Html.Raw(ViewBag.c)
+@Html.Raw(ViewBag.t)
+@Html.ActionLink("Mở Trang New","News","Default")
+

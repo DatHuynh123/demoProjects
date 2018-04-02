@@ -1,0 +1,49 @@
+@*<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Panelo - Free Admin Template</title>
+    <link href="~/Assets/Admin/mos-css/style.css" rel="stylesheet" />    
+    <link href='http://fonts.googleapis.com/css?family=Belgrano' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div id="loginpanelwrap">
+
+        <div class="loginheader">
+            <div class="logintitle"><a href="#">Panelo Admin</a></div>
+        </div>  
+             @using (Html.BeginForm())
+             {
+                 @Html.AntiForgeryToken()
+                 @Html.ValidationSummary(true, null, new { @class="alert alert-danger"})
+                 <div class="loginform">
+            <div class="loginform_row">
+                @Html.TextBoxFor(model => model.TenTK, new { @class = "loginform_input", @label = "Username:",@autofocus = "autofocus" })                
+                @*<label>Username:</label>
+                <input type="text" class="loginform_input" name="" />*@
+            </div>
+            <div class="loginform_row">
+                @Html.TextBoxFor(model => model.PW, new { @class = "loginform_input", @label = "Password:", @type = "password" })
+                @*<label>Password:</label>
+                <input type="text" class="loginform_input" name="" />*@
+            </div>
+            <div class="checkbox">
+                <label>
+                    @Html.CheckBoxFor(model => model.RememberMe)
+                    Remember Me
+                    @*<input type="submit" class="loginform_submit" value="Login" />*@
+                </label>
+                 </div>
+                     <button type="submit" class="loginform_submit">Login</button>
+            <div class="clear"></div>
+        </div>
+                 
+             }
+        
+
+
+    </div>
+
+
+</body>
+</html>*@
